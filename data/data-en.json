@@ -1,0 +1,70 @@
+{
+    "companyName": "Cool company",
+    "companyQuote": "Your choise",
+    "order": "Order",
+    "main": "Main",
+    "portfolio": "Portfolio",
+    "works": "Works",
+    "contacts": "Contacts",
+    "ourProjects": "Our projects",
+    "location": "Kyiv, Ukraine",
+    "email": "ivan@gmail.com",
+    "phoneNumber": "+123456",
+    "firstName": "Name",
+    "order-title1": "Order 1",
+    "order-title2": "Order 2",
+    "order-title3": "Order 3",
+    "$works": {
+        "worksTitle": "Works title",
+        "worksAr": [
+            {
+                "title": "Windows montage",
+                "entries": [
+                    "Tegel werkt",
+                    "Schilderen werkt",
+                    "Gips werkt",
+                    "Installatie van gipsplaten",
+                    "Behang plakken",
+                    "Ruw werk op de vloer",
+                    "Vloerbedekking",
+                    "Plafond",
+                    "Installatie van voering"
+                ]
+            },
+            {
+                "title": "Some more activities",
+                "entries": [
+                    "Gevel werkt",
+                    "Metselwerk",
+                    "Fundering",
+                    "Bestrating tegels",
+                    "Montagewerkzaamheden (platen, FSB)",
+                    "Dakbedekking werkt",
+                    "Grondwerken",
+                    "Trap",
+                    "Isolatie werkt",
+                    "Waterdichtheid",
+                    "Thermische isolatie",
+                    "Geluidsisolatie",
+                    "Concrete werken",
+                    "Diensten van klusjesmannen"
+                ]
+            },
+            {
+                "title": "Some more activities",
+                "entries": [
+                    "Demontage van sanitair",
+                    "Ramen en deuren demonteren",
+                    "Slopen van muren en scheidingswanden",
+                    "Gaten en flitsers",
+                    "Verf verwijderen",
+                    "Demontage van wandbekleding",
+                    "Demontage van vloerbedekking",
+                    "Sloop van gebouwen",
+                    "Demontage van metalen constructies",
+                    "Weer een demontage"
+                ]
+            }
+        ]
+    }
+}

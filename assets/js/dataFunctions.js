@@ -2,38 +2,70 @@ const localeKey = 'l';
 const defaultLocale = 'en'
 
 const getLocale = () => {
-  const locale = localStorage.getItem(localeKey)
-  if (!locale) {
-    setLocale(defaultLocale)
-    return defaultLocale
-  }
+    const locale = localStorage.getItem(localeKey)
+    if (!locale) {
+        setLocale(defaultLocale)
+        return defaultLocale
+    }
 
-  return locale
+    return locale
 }
 
 const setLocale = (l) => {
-  localStorage.setItem(localeKey, l)
+    localStorage.setItem(localeKey, l)
 }
 
 const getDataFile = () => {
-  const locale = getLocale()
-  return `data-${locale}.json`
+    const locale = getLocale()
+    return `data/data-${locale}.json`
 }
 
 const fillHtml = (cl, text) => {
-  // fill text in elements with class "t-<className>" 
-  $(`.${`t-${cl}`}`).each(function (index, element) {
-    $(element).text(text);
-  });
+    // fill text in elements with class "t-<className>" 
+    $(`.${`t-${cl}`}`).each(function (index, element) {
+        $(element).text(text);
+    });
+}
+
+const fillStaticText = (data) => {
+    for (const [key, value] of Object.entries(data)) {
+        if (!key.startsWith("$")) {
+            fillHtml(key, value)
+        }
+    }
+}
+
+const fillWorks = (data) => {
+    const workSection = data.$works
+
+    const worksTitleHtml = `<h2>${workSection.worksTitle}</h2>`
+    const worksHtml = '<div class="intro--options">'
+
+    $.each(workSection.worksAr, function (work) {
+        let html = `<p>${work.title}`
+        html =+ '<p><ul class="b">'
+
+        $.each(work.entries, function (entry) {
+            html => `<li>${entry}</li>`
+        })
+
+        html =+ '</ul></p></p>'
+
+        worksHtml =+ html
+    })
+
+    worksHtml =+ '</div>'
+
+    const finalHtml = worksTitleHtml + worksHtml
+
+    $('#workSection').html(finalHtml)
+    // <p>Afwerking werkt<p><ul class="b"><li>Tegel werkt</li><li>Schilderen werkt</li><li>Gips werkt</li></ul></p></p>
 }
 
 $(document).ready(function () {
-  $.getJSON(getDataFile(), function (data) {
+    $.getJSON(getDataFile(), function (data) {
+        fillStaticText(data)
 
-    console.log(data)
-
-    for(const [key, value] of Object.entries(data)){
-      fillHtml(key, value)
-    }
-  });
+        fillWorks(data)
+    });
 });
