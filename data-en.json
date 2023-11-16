@@ -7,7 +7,11 @@
     "works": "Works",
     "contacts": "Contacts",
     "ourProjects": "Our projects",
-    "location": "Location",
-    "email": "Email",
-    "phoneNumber": "+123456"
+    "location": "Kyiv, Ukraine",
+    "email": "ivan@gmail.com",
+    "phoneNumber": "+123456",
+    "firstName": "Name",
+    "order-title1": "Order 1",
+    "order-title2": "Order 2",
+    "order-title3": "Order 3"
 }

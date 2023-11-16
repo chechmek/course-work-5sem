@@ -1,48 +1,4 @@
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
-const localeKey = 'l';
-const defaultLocale = 'en'
-
-const getLocale = () => {
-  const locale = localStorage.getItem(localeKey)
-  if (!locale) {
-    setLocale(defaultLocale)
-    return defaultLocale
-  }
-
-  return locale
-}
-
-const setLocale = (l) => {
-  localStorage.setItem(localeKey, l)
-}
-
-const getDataFile = () => {
-  const locale = getLocale()
-  return `data-${locale}.json`
-}
-
-const fillHtml = (cl, text) => {
-  $(`.${cl}`).each(function (index, element) {
-    $(element).text(text);
-  });
-}
-
-$(document).ready(function () {
-  $.getJSON(getDataFile(), function (data) {
-
-    console.log(data)
-    fillHtml('companyName', data.companyName)
-    fillHtml('companyQuote', data.companyQuote);
-    fillHtml('order', data.order);
-    fillHtml('main', data.main);
-    fillHtml('portfolio', data.portfolio);
-    fillHtml('works', data.works);
-    fillHtml('contacts', data.contacts);
-    fillHtml('ourProjects', data.ourProjects);
-    fillHtml('location', data.location);
-    fillHtml('email', data.email);
-  });
-});
 
 $(document).ready(function () {
 
