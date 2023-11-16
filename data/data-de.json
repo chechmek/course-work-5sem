@@ -1,0 +1,71 @@
+{
+    "companyName": "Intelligent bauen",
+    "companyQuote": "Ihre Wahl im Bauwesen",
+    "order": "Bestellen",
+    "main": "Haupt",
+    "portfolio": "Portfolio",
+    "works": "Arbeiten",
+    "contacts": "Kontakte",
+    "ourProjects": "Unsere Projekte",
+    "location": "Kyiv, Ukraine",
+    "email": "ivan@gmail.com",
+    "phoneNumber": "+123456",
+    "firstName": "Name",
+    "order-title1": "Fenstermontage",
+    "order-title2": "Fliesenmontage",
+    "order-title3": "Tapetenmontage",
+    "chooseLanguage": "Sprache",
+    "$works": {
+        "worksTitle": "Was machen wir?",
+        "worksAr": [
+            {
+                "title": "Fenstermontage",
+                "entries": [
+                    "Fenstereinbau",
+                    "Anstrich von Fensterrahmen",
+                    "Glasinstallation",
+                    "Versiegelung von Fensteröffnungen",
+                    "Behandlung von Holzfensterkonstruktionen",
+                    "Fertigstellung von Fensterrahmen",
+                    "Installation von Fensterabdeckungen",
+                    "Anbringen von Dichtungen",
+                    "Montage von Fensterläden"
+                ]
+            },
+            {
+                "title": "Fliesenmontage",
+                "entries": [
+                    "Installation von Fassadenfliesen",
+                    "Durchführung von Maurerarbeiten",
+                    "Legen von Fundamenten",
+                    "Verlegen von Fliesen",
+                    "Montage von Fliesenpaneelen (Platten, FSB)",
+                    "Dachinstallation",
+                    "Ausführung von Erdarbeiten",
+                    "Bau von Treppen",
+                    "Isolierung von Wänden",
+                    "Gewährleistung der Wasserdichtigkeit",
+                    "Anwendung von Wärmedämmung",
+                    "Umsetzung von Schalldämmung",
+                    "Durchführung von Betonarbeiten",
+                    "Handwerkerleistungen"
+                ]
+            },
+            {
+                "title": "Tapetenmontage",
+                "entries": [
+                    "Demontage von Sanitäreinrichtungen",
+                    "Ausbau von Fenstern und Türen",
+                    "Abriss von Wänden und Trennwänden",
+                    "Schneiden von Löchern und Schlitzen",
+                    "Entfernen von Farbe",
+                    "Ablösen von Wandverkleidungen",
+                    "Entfernen von Bodenbelägen",
+                    "Gebäudedemontagen",
+                    "Demontage von Metallstrukturen",
+                    "Andere Demontagearbeiten"
+                ]
+            }
+        ]
+    }
+}

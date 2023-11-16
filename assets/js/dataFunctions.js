@@ -69,4 +69,10 @@ $(document).ready(function () {
 
         fillWorks(data)
     });
+
+    $('#languageSelect').change(function() {
+        var selectedLanguage = $(this).val();
+        setLocale(selectedLanguage)
+        location.reload();
+      });
 });
