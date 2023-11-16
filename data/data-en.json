@@ -20,49 +20,49 @@
             {
                 "title": "Windows montage",
                 "entries": [
-                    "Tegel werkt",
-                    "Schilderen werkt",
-                    "Gips werkt",
-                    "Installatie van gipsplaten",
-                    "Behang plakken",
-                    "Ruw werk op de vloer",
-                    "Vloerbedekking",
-                    "Plafond",
-                    "Installatie van voering"
+                    "Window installation",
+                    "Painting window frames",
+                    "Glass installation",
+                    "Sealing window openings",
+                    "Treating wooden window structures",
+                    "Finishing window frames",
+                    "Installing window coverings",
+                    "Applying seals",
+                    "Mounting shutters"
                 ]
             },
             {
                 "title": "Tiles montage",
                 "entries": [
-                    "Gevel werkt",
-                    "Metselwerk",
-                    "Fundering",
-                    "Bestrating tegels",
-                    "Montagewerkzaamheden (platen, FSB)",
-                    "Dakbedekking werkt",
-                    "Grondwerken",
-                    "Trap",
-                    "Isolatie werkt",
-                    "Waterdichtheid",
-                    "Thermische isolatie",
-                    "Geluidsisolatie",
-                    "Concrete werken",
-                    "Diensten van klusjesmannen"
+                    "Installing facade tiles",
+                    "Performing masonry work",
+                    "Laying foundations",
+                    "Paving with tiles",
+                    "Mounting tile panels (sheets, FSB)",
+                    "Installing roofing",
+                    "Executing groundwork",
+                    "Building stairs",
+                    "Insulating walls",
+                    "Ensuring water tightness",
+                    "Applying thermal insulation",
+                    "Implementing sound insulation",
+                    "Performing concrete works",
+                    "Handyman services"
                 ]
             },
             {
                 "title": "Wallpaper montage",
                 "entries": [
-                    "Demontage van sanitair",
-                    "Ramen en deuren demonteren",
-                    "Slopen van muren en scheidingswanden",
-                    "Gaten en flitsers",
-                    "Verf verwijderen",
-                    "Demontage van wandbekleding",
-                    "Demontage van vloerbedekking",
-                    "Sloop van gebouwen",
-                    "Demontage van metalen constructies",
-                    "Weer een demontage"
+                    "Dismantling sanitary fixtures",
+                    "Disassembling windows and doors",
+                    "Demolishing walls and partitions",
+                    "Cutting holes and chases",
+                    "Removing paint",
+                    "Dismantling wall coverings",
+                    "Removing floor coverings",
+                    "Building demolitions",
+                    "Dismantling metal structures",
+                    "Another dismantling job"
                 ]
             }
         ]
