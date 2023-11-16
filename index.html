@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>НАЗВА ФІРМИ</title>
+  <title class="companyName">НАЗВА ФІРМИ</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,9 @@
 <div class="device-notification">
   <a class="device-notification--logo" href="#0">
     <img src="assets/img/logo.png" alt="НАЗВА ФІРМИ">
-    <p>НАЗВА ФІРМИ</p>
+    <p class="companyName">НАЗВА ФІРМИ</p>
   </a>
-  <p class="device-notification--message">Ваш вибір у будівництві</p>
+  <p class="device-notification--message companyQuote">Ваш вибір у будівництві</p>
 </div>
 
 <div class="perspective effect-rotate-left">
@@ -28,28 +28,28 @@
         <header class="header">
           <a class="header--logo" href="#0">
             <img src="assets/img/logo.png" alt="Global">
-            <p>НАЗВА ФІРМИ</p>
+            <p class="companyName">НВА ФІРМИ</p>
           </a>
-          <button class="header--cta cta">Замовити</button>
+          <button class="header--cta cta order">Замовити</button>
           <div class="header--nav-toggle">
             <span></span>
           </div>
         </header>
         <nav class="l-side-nav">
           <ul class="side-nav">
-            <li class="is-active"><span>Головна</span></li>
-            <li><span>Портфоліо</span></li>
-            <li><span>Роботи</span></li>
-            <li><span>Контакти</span></li>
-            <li><span>Замовити</span></li>
+            <li class="is-active"><span class="main">Головна</span></li>
+            <li><span class="portfolio">Портфоліо</span></li>
+            <li><span class="works">Роботи</span></li>
+            <li><span class="contacts">Контакти</span></li>
+            <li><span class="order">Замовити</span></li>
           </ul>
         </nav>
         <ul class="l-main-content main-content">
           <li class="l-section section section--is-active">
             <div class="intro">
               <div class="intro--banner">
-                <h1>Ваш<br>вибір у<br>будівництві</h1>
-                <button class="cta">Замовити
+                <h1 class="companyQuote">Ваш<br>вибір у<br>будівництві</h1>
+                <button class="cta order">Замовити
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                   <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                     <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
@@ -79,8 +79,9 @@
           </li>
           <li class="l-section section">
             <div class="work">
-              <h2>Наші проєкти</h2>
+              <h2 class="ourProjects">Наші проєкти</h2>
               <div class="work--lockup">
+                <!-- GALLERY -->
                 <ul class="slider">
                   <li class="slider--item slider--item-left">
                     <a href="#0">
@@ -222,9 +223,9 @@
               <div class="contact--lockup">
                 <div class="modal">
                   <div class="modal--information">
-                    <p>Kyiv, Ukraine</p>
-                    <a href="mailto:ivan@gmail.com">ivan@gmail.com</a>
-                    <a href="tel:+31686250001">+38XXX-XXX-XX-XX - IVANOV IVAN</a>
+                    <p class="location">Kyiv, Ukraine</p>
+                    <a class="email" href="mailto:ivan@gmail.com">ivan@gmail.com</a>
+                    <a class="phoneNumber" href="tel:+31686250001">+38XXX-XXX-XX-XX - IVANOV IVAN</a>
                   </div>
                   
                 </div>
@@ -273,11 +274,11 @@
 				 
                 <div class="work-request--information">
                   <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
+                    <input class="name" type="text" spellcheck="false">
                     <label for="name">Ім’я</label>
                   </div>
                   <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
+                    <input class="email" type="email" spellcheck="false">
                     <label for="email">Email</label>
                   </div>
                 </div>
@@ -290,16 +291,17 @@
     </div>
   </div>
   <ul class="outer-nav">
-    <li class="is-active">Головна</li>
-    <li>Портфоліо</li>
-    <li>Роботи</li>
-    <li>Контакти</li>
-    <li>Замовити</li>
+    <li class="is-active main">Головна</li>
+    <li class="portfolio">Портфоліо</li>
+    <li class="works">Роботи</li>
+    <li class="contacts">Контакти</li>
+    <li class="order">Замовити</li>
   </ul>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
+<script src="assets/js/functions.js"></script>
 </body>
 </html>
