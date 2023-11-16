@@ -1,6 +1,6 @@
 {
-    "companyName": "Cool company",
-    "companyQuote": "Your choise",
+    "companyName": "Build smart",
+    "companyQuote": "Your choise in building",
     "order": "Order",
     "main": "Main",
     "portfolio": "Portfolio",
@@ -11,9 +11,9 @@
     "email": "ivan@gmail.com",
     "phoneNumber": "+123456",
     "firstName": "Name",
-    "order-title1": "Order 1",
-    "order-title2": "Order 2",
-    "order-title3": "Order 3",
+    "order-title1": "Windows montage",
+    "order-title2": "Tiles montage",
+    "order-title3": "Wallpaper montage",
     "$works": {
         "worksTitle": "Works title",
         "worksAr": [
@@ -32,7 +32,7 @@
                 ]
             },
             {
-                "title": "Some more activities",
+                "title": "Tiles montage",
                 "entries": [
                     "Gevel werkt",
                     "Metselwerk",
@@ -51,7 +51,7 @@
                 ]
             },
             {
-                "title": "Some more activities",
+                "title": "Wallpaper montage",
                 "entries": [
                     "Demontage van sanitair",
                     "Ramen en deuren demonteren",

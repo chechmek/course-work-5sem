@@ -39,24 +39,25 @@ const fillWorks = (data) => {
     const workSection = data.$works
 
     const worksTitleHtml = `<h2>${workSection.worksTitle}</h2>`
-    const worksHtml = '<div class="intro--options">'
+    let worksHtml = '<div class="intro--options">'
 
-    $.each(workSection.worksAr, function (work) {
+    $.each(workSection.worksAr, function (i, work) {
         let html = `<p>${work.title}`
-        html =+ '<p><ul class="b">'
-
-        $.each(work.entries, function (entry) {
-            html => `<li>${entry}</li>`
+        html += '<p><ul class="b">'
+        $.each(work.entries, function (i, entry) {
+            html += `<li>${entry}</li>`
         })
+        
+        html += '</ul></p></p>'
 
-        html =+ '</ul></p></p>'
-
-        worksHtml =+ html
+        worksHtml += html
     })
 
-    worksHtml =+ '</div>'
+    worksHtml += '</div>'
 
     const finalHtml = worksTitleHtml + worksHtml
+
+    
 
     $('#workSection').html(finalHtml)
     // <p>Afwerking werkt<p><ul class="b"><li>Tegel werkt</li><li>Schilderen werkt</li><li>Gips werkt</li></ul></p></p>
