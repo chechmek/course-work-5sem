@@ -112,7 +112,7 @@ const getSupportedLanguages = () => {
         return JSON.parse(localStorage.getItem('supportedLanguages'))
     }
 
-    $.get("../../readme.txt", function (data) {
+    $.get("../../languages.txt", function (data) {
         const lines = data.split('\n');
         const languages = {};
 
