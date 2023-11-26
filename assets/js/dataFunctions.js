@@ -15,7 +15,7 @@ const getLocale = () => {
         return defaultLocale
     }
     for (const [key, value] of Object.entries(langs)) {
-        if(locale === key){
+        if (locale === key) {
             return locale
         }
     }
@@ -50,6 +50,8 @@ const fillStaticText = (data) => {
 
 const fillWorks = (data) => {
     const workSection = data.$works
+    if (!workSection)
+        return;
 
     const worksTitleHtml = `<h2>${workSection.worksTitle}</h2>`
     let worksHtml = '<div class="intro--options">'
@@ -71,7 +73,38 @@ const fillWorks = (data) => {
     const finalHtml = worksTitleHtml + worksHtml
 
     $('#workSection').html(finalHtml)
-    // <p>Afwerking werkt<p><ul class="b"><li>Tegel werkt</li><li>Schilderen werkt</li><li>Gips werkt</li></ul></p></p>
+}
+
+const fillGallery = (data) => {
+    const imgArray = data.$gallery?.imgArray
+    if (!imgArray)
+        return;
+
+    let finalHtml = ""
+    $.each(imgArray, function (i, item) {
+        let href = "#"
+        let src = item.smallUrl
+        let title = item.title
+        let text = item.text
+        let itemClass = ""
+        console.log(item)
+        switch (i) {
+            case 0:
+                itemClass = "slider--item slider--item-left"; break;
+            case 1:
+                itemClass = "slider--item slider--item-center"; break;
+            case 2:
+                itemClass = "slider--item slider--item-right"; break;
+            default:
+                itemClass = "slider--item"
+        }
+        
+        let liHtml = `<li class="${itemClass}"><a href="${href}"><div class="slider--item-image"><img src="${src}" alt="Image"></div><p class="slider--item-title">${title}</p><p class="slider--item-description">${text}</p></a></li>`
+        finalHtml += liHtml
+    })
+    
+
+    $("#gallery").html(finalHtml)
 }
 
 const getSupportedLanguages = () => {
@@ -114,6 +147,8 @@ $(document).ready(function () {
         fillStaticText(data)
 
         fillWorks(data)
+
+        fillGallery(data)
     });
 
     $('#languageSelect').change(function () {
