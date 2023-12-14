@@ -83,7 +83,8 @@ const fillGallery = (data) => {
     let finalHtml = ""
     $.each(imgArray, function (i, item) {
         let href = "/gallery.html"
-        let src = item.smallUrl
+        let src = `gallery/title/image${i+1}/small/image.jpg`
+        // let src = item.smallUrl
         let title = item.title
         let text = item.text
         let itemClass = ""
@@ -99,7 +100,7 @@ const fillGallery = (data) => {
                 itemClass = "slider--item"
         }
         
-        let liHtml = `<li class="${itemClass}"><a href="${href}"><div class="slider--item-image"><img src="${src}" alt="Image"></div><p class="slider--item-title">${title}</p><p class="slider--item-description">${text}</p></a></li>`
+        let liHtml = `<li class="${itemClass}"><a href="${href}"><div class="slider--item-image"><img style="height: 100%; width: auto" src="${src}" alt="Image"></div><p class="slider--item-title">${title}</p><p class="slider--item-description">${text}</p></a></li>`
         finalHtml += liHtml
     })
     

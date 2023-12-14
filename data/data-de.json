@@ -66,5 +66,25 @@
                 ]
             }
         ]
+    },
+    "$gallery": {
+        "imgArray": [
+            {
+                "title": "Titel 1",
+                "text": "Text 1"
+            },
+            {
+                "title": "Titel 2",
+                "text": "Text 2"
+            },
+            {
+                "title": "Titel 3",
+                "text": "Text 3"
+            },
+            {
+                "title": "Titel 4",
+                "text": "Text 4"
+            }
+        ]
     }
 }
