@@ -82,7 +82,7 @@ const fillGallery = (data) => {
 
     let finalHtml = ""
     $.each(imgArray, function (i, item) {
-        let href = "#"
+        let href = "/gallery.html"
         let src = item.smallUrl
         let title = item.title
         let text = item.text

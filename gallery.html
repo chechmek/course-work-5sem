@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #gallery-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .thumbnail {
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 150px;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        #preview-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        #preview {
+
+            width: 800px;
+            height: auto;
+        }
+
+    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/etc.css">
+</head>
+
+<body>
+    <a class="header--logo" href="/">
+        <img src="assets/img/logo.png" alt="Global">
+        <p class="t-companyName">НВА ФІРМИ</p>
+      </a>
+    <div id="gallery-page"></div>
+    <div id="preview-container">
+        <img id="preview" src="gallery/title/image1/big/image.jpg" alt="Preview">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function getFoldersInFolder(folderPath) {
+            const folders = [];
+            $.ajax({
+                url: folderPath,
+                success: (data) => {
+                    $(data).find('a').each((index, element) => {
+                        const folderName = $(element).text().trim();
+                        if (folderName !== '..' && folderName !== '.' && folderName.startsWith("image")) {
+                            folders.push(folderName);
+                        }
+                    });
+                },
+                async: false
+            });
+            console.log(folders)
+            return folders;
+        }
+
+
+        // Specify the path to the "images" folder
+        const imagesFolderPath = 'gallery/title/';
+
+        // Populate the gallery with thumbnails
+        const gallery = $('#gallery-page');
+        const imageFolders = getFoldersInFolder(imagesFolderPath);
+        imageFolders.forEach((folder) => {
+            const thumbnail = $('<img>', {
+                class: 'thumbnail',
+                src: imagesFolderPath + folder + 'small/' + folder.split('/').pop() + 'image.jpg', // Adjust the filename based on your naming convention
+                alt: folder.split('/').pop()
+            });
+
+            thumbnail.click(() => showPreview(imagesFolderPath + folder + 'big/' + folder.split('/').pop() + 'image.jpg')); // Adjust the filename based on your naming convention
+
+            gallery.append(thumbnail);
+        });
+
+        // Show the image preview
+        function showPreview(image) {
+            const preview = $('#preview');
+            preview.attr('src', image);
+            // You can add additional logic here for more features, like captions, etc.
+        }
+    </script>
+    <script src="assets/js/dataFunctions.js"></script>
+</body>
+
+</html>
+
+
+</html>
